@@ -1,0 +1,220 @@
+@import './constant.module.scss';
+.container {
+    .overviewDataitemContainer {
+        padding-top: 10px;
+    }
+    
+    .chartOverviewContainer{
+        padding-top: 10px;
+        @mixin commom(){
+            min-height: 385px;
+            border-radius: $border-radius;
+            width: 100%;
+            background: $primary-color;
+            @media screen and(max-width: 720px) {
+                margin-top: 10px;
+            }
+        };
+        
+        .chartContainer{
+            @include commom();
+            position: relative;
+            .headerContainer {
+                position: absolute;
+                top: 20px;
+                left: 15px;
+                p {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 1.44px;
+                    color: #FFFFFF;
+                    padding: 0;
+                    margin: 0;
+                    text-transform: uppercase;
+                }
+
+                span {
+                    padding-top: 10px;
+                    color: #B9B9B9
+                }
+            }
+
+            .legendContainer{
+                position: absolute;
+                top: 40px;
+                right: 15px;
+                .childContent{
+                    display: flex;
+                    .legendItem {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        float: left; 
+                        .childContent {
+                            display: flex;
+                            .spanContainer {
+                                float: left;
+                            }
+
+                            .contentContainer {
+                                float: left; 
+                                p {
+                                    padding: 0;
+                                    margin: 0;
+                                }
+
+                                .label {
+                                    padding: 0;
+                                    margin: 0;
+                                    // font-family: Roboto;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 17px;
+                                    line-height: 140%;
+                                    letter-spacing: 0.3px;
+                                    text-transform: uppercase;
+                                    color: #FFFFFF;
+                                }
+
+                                .valueContainer {
+                                    .value {
+                                        font-family: Roboto;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 120%;
+                                        letter-spacing: -0.4px;
+                                    }
+
+                                    .last {
+                                        color: #04ec38; 
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            #dashboardchart {
+                height: 340px; 
+                width: '100%';
+                padding-top: 100px;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            @media screen and(max-width: 990px) {
+                .legendContainer, .headerContainer {
+                    position: static;
+                    padding-left: 15px;
+                    padding-top: 20px;
+                }
+
+                #dashboardchart {
+                    padding-top: 30px;
+                }
+            }
+        } 
+    }
+
+    .detailsContainer{
+        @media screen and(min-width: 990px) {
+            padding-top: 10px;
+        }
+        
+        .itemContainer{
+            float: right; 
+            min-height: 385px;
+            max-height: 385px;
+            border-radius: $border-radius;
+            background: $primary-color;
+            padding: 20px 15px; 
+            width: 100%;
+            position: relative;
+            @media screen and(max-width: 990px) {
+                margin-top: 15px;
+                @media screen and(max-width: 720px) {
+                    margin-top: 15px;
+                }
+            }
+
+            .headerContainer {
+                position: relative;
+            }
+            
+            p{
+                // font-family: IBM Plex Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 1.44px;
+                color: #FFFFFF;
+            }
+            
+            .daySinceOperation{
+                .valueContainer {
+                    text-align: center;
+                    padding-top: 65px;
+                    span {
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 90px;
+                        line-height: 65px;
+                        letter-spacing: -0.01em;
+                        display: block;
+                        &.day {
+                            font-size: 35px;
+                        }
+                    }
+
+                    @media screen and(max-width: 1200px) {
+                        span {
+                            font-size: 70px;
+                        }
+                    }
+                    @media screen and(max-width: 900px){
+                        span {
+                            font-size: 140px;
+                            padding-bottom: 40px;
+                            &.day {
+                                font-size: 55px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .scholarLegend {
+                position: absolute;
+                bottom: 0px;
+                display: flex;
+                .legendItem {
+                    float: left;
+                    padding-right: 10px;
+                    span {
+                        font-size: 10px;
+                        line-height: 0;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    
+                    @media screen and (max-width: 990px){
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

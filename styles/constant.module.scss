@@ -1,0 +1,28 @@
+$border-radius: 20px; 
+$primary-color: #222235;
+
+@mixin large_normal_text(){
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 5px;
+    padding-top: 4px;
+}
+
+@mixin small_normal_text(){
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 5px;
+    padding-top: 4px;
+}

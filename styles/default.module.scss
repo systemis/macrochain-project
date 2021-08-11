@@ -1,0 +1,55 @@
+.defaultLayout{
+    display: flex; 
+    background-color: #041129;
+    .mainLayout {
+        position: relative;
+        min-height: 100vh;
+        top: 0;
+        left: 78px;
+        width: calc(100% - 78px);
+        transition: all 0.5s ease;
+        z-index: 2;
+        color: white; 
+        // padding-left: 15px;
+        // padding-right: 40px ;
+        @media screen and (max-width: 720px) {
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 20px;
+        }
+
+        &.open {
+            left: 250px;
+            width: calc(100% - 250px);
+        }
+
+        .screen_name {
+            font-family: Alatsi;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 38px;
+            display: flex;
+            align-items: center;
+            color: #CACACA;
+            text-transform: uppercase;
+        }
+
+        .contentContainer{
+            padding: 0 20px;
+            padding-top: 10px;
+            @media screen and(max-width: 990px) {
+                padding-right: 10px; 
+                padding-left: 5px;
+            }
+        }
+
+        .text {
+            display: inline-block;
+            color: #11101d;
+            font-size: 25px;
+            font-weight: 500;
+            margin: 18px
+        }
+    }; 
+}

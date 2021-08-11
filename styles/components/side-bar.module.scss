@@ -1,0 +1,179 @@
+.sideBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+    background: #161624;
+    &.open {
+        width: 250px;
+        li {
+            a {
+                .links_name {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+
+            .tooltip {
+                display: none;
+            }
+        }
+
+        .logoDetails {
+            .icon, .logo_name {
+                opacity: 1;
+            }
+            #btn {
+                text-align: right;
+            }
+        }
+    }
+    
+    .logoDetails{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        .icon {
+            opacity: 1.0;
+            transition: all 0.5s ease;
+        }
+        .logo_name {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.5s ease;
+            padding-left: 10px;
+            padding-top: 15px;
+            
+            p{ font-size: 12px; }
+        }
+
+        #btn {
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+            font-size: 22px;
+            transition: all 0.4s ease;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            text-align: right;
+            margin-left: 10px;
+        }
+    }
+
+    i {
+        color: #fff;
+        height: 60px;
+        min-width: 50px;
+        font-size: 28px;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    .navList {
+        margin-top: 20px;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        position: relative;
+        margin: 8px 0;
+        list-style: none;
+        padding-bottom: 10px;
+        i {
+            height: 50px;
+            line-height: 50px;
+            font-size: 30px; 
+            border-radius: 12px;
+        }
+
+        a {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            .links_name {
+                color: grey;
+                font-size: 15px;
+                font-weight: 400;
+                white-space: nowrap;
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.4s;
+            }
+
+            &:hover {
+                border-right-width: 20px;
+                border-right-color: #ffff;
+            }
+        }
+
+        .tooltip {
+            position: absolute;
+            top: -20px;
+            left: calc(100% + 15px);
+            z-index: 3;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 400;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: 0s;
+        }
+
+        .rightSpan {
+            // width: '5px', 
+            //     height: '25px', 
+            //     background: '#fff', 
+            //     position: 'absolute', 
+            //     top: '15px', 
+            //     right: '-10px', 
+            //     borderRadius:'3px'
+            width: 5px; 
+            height: 25px; 
+            background: #ffff;
+            position: absolute;
+            top: 15px;
+            right: -10px;
+            border-radius: 3px;
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+
+        &:hover {
+            .tooltip {
+                opacity: 1;
+                pointer-events: auto;
+                transition: all 0.4s ease;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .rightSpan {
+                display: block;
+            }
+        }
+    }
+}
